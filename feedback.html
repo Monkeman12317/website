@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="icon" href="pickle logo.jpeg">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <h1>Feedback</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="my gallery.html">Gallery</a>
+        <a href="feedback.html">Feedback_Form</a>
+        <a href="minigames.html">Mini_Projects</a></nav>
+    <form action="mailto: s-akumbhar@lwsd.org?subject=Feedback" method="POST" enctype="text/plain">
+        <label for="fname">
+            First Name
+        </label>
+        <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+        <br>
+        <br>
+        <label for="lname">
+            Last Name
+        </label>
+        <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+        <br>
+        <br>
+        <label for="Gender">
+            Gender: 
+        </label>
+        <br>
+        <label for="male">
+            Male ->
+        </label>
+        <input type="Radio" name="Gender" id="male">
+        <br>
+        <label for="female">
+            Female ->
+        </label>
+        <input type="Radio" name="Gender" id="female">
+        <br>
+        <label for="Prefer not to say">
+            Prefer not to say ->
+        </label>
+        <input type="Radio" name="Gender" id="Prefer not to say">
+        <br>
+        <label for="other">
+            Other ->
+        </label>
+        <input type="Radio" name="Gender" id="other">
+        <br>
+        <br>
+        <label for="">
+            Email Address: 
+            <input type="email" name="email" id="email" placeholder="Example@email.com">
+        </label>
+        <br>
+        <br>
+        <label for="Info">
+            How did you get to know my website?
+        </label>
+        <br>
+        <label for="internet">
+            Internet: 
+        </label>
+        <input type="checkbox" name="Info" id="Internet" value="Internet">
+        <br>
+        <label for="Friends">
+            Friends: 
+        </label>
+        <input type="checkbox" name="Info" id="Friends" value="Friends">
+        <br>
+        <label for="Social media">
+            Social Media: 
+        </label>
+        <input type="checkbox" name="Info" id="Social media" value="Social media">
+        <br>
+        <label for="Other">
+            Other: 
+        </label>
+        <input type="checkbox" name="Info" id="Other" value="Other">
+        <br>
+        <br>
+        <label for="Rate">
+            Rate My Website
+        </label>
+        <select name="Rate" id="Rate">
+            <option value="1" id="1" name="1">1 (Trash)</option>
+            <option value="2" id="2" name="2">2 (Terrible)</option>
+            <option value="3" id="3" name="3">3 (Decent)</option>
+            <option value="4" id="4" name="4">4 (Good)</option>
+            <option value="5" id="5" name="5">5 (Excellent)</option>
+        </select>
+        <br>
+        <br>
+        <label for="Sugestions">
+            Suggestions:
+        </label>
+        <br>
+        <br>
+        <textarea name="Suggestions" id="Suggestions" cols="50" rows="15">Enter Your Suggestions</textarea>
+        <br>
+        <br>
+        <input type="Submit" value="Submit">
+    </form>
+    
+</body>
+</html>

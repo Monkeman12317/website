@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="icon" href="pickle logo.jpeg">
+</head>
+<body>
+    <h1>My life</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="my gallery.html">Gallery</a>
+        <a href="feedback.html">Feedback_Form</a>
+        <a href="minigames.html">Mini_Projects</a></nav>
+    <div class="main_division">
+        <h2>My favorite sport teams</h2>
+        <div class="subdiv"><a href="https://www.packers.com/"><img src="packers logo.jpeg" alt="image not loading :("></a></div>
+        <div class="subdiv"><a href="https://www.nba.com/blazers/"><img src="trailblazers logo.png" alt="image not loading :("></a></div>
+        <div class="subdiv"><a href="https://en.psg.fr/"><img src="psg logo.png" alt="image not loading :("></a></div>
+        <div class="subdiv"><a href="https://www.bcci.tv/"><img src="india logo.png" alt="image not loading :("></a></div>
+
+
+    </div>
+    <div class="main_division">
+        <h2>Favorite Songs</h2>
+        <div class="subdiv"><audio controls src="Juice WRLD - Bandit ft. NBA Youngboy (Directed by Cole Bennett).mp3"></audio><p>Bandit - Juice WRLD ft. NBA Youngboy</p></div>
+        <div class="subdiv"><audio controls src="XXXTENTACION - MOONLIGHT (OFFICIAL MUSIC VIDEO).mp3"></audio><p>Moonlight - XXXTENTACION</p></div>
+        <div class="subdiv"><audio controls src="Future & Young Thug - Patek Water Feat  Offset [Official Audio].mp3"></audio><p>Patek Water - Future and Young Thug ft. Offset</p></div>
+        <div class="subdiv"><audio controls src="Mustard - Ballin (Lyrics) ft. Roddy Ricch.mp3"></audio><p>Ballin - Mustard ft. Roddy Ricch</p></div>
+
+    </div>
+    <div class="main_division">
+        <h2>Favorite Videos</h2>
+        <div class="subdiv"><video controls src="Pickle - On The Drums (Official Music Video).mp4"></video><p>Pickle - On the drums</p></div>
+        <div class="subdiv"><video controls src="pickle.mp4"></video><p>Pickle Song</p></div>
+        <div class="subdiv"><video controls src="Shrek.mp4"></video><p>Shrek moment</p></div>
+        <div class="subdiv"><video controls src="GOT'EEEEMM!!!!!.mp4"></video><p>GOT'EEEEMM</p></div>
+
+    </div>
+    <div class="main_division">
+        <h2>Favorite Youtube Videos</h2>
+        <div class="subdiv"><iframe src="https://www.youtube.com/embed/gsFHUCGIXSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="subdiv"><iframe src="https://www.youtube.com/embed/5UTiJNFrS-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="subdiv"><iframe src="https://www.youtube.com/embed/NnQLFfDWL58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="subdiv"><iframe src="https://www.youtube.com/embed/kYpt2ZYAHL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+    </div>
+    <div class="main_division">
+        <canvas id="myCanvas">
+
+        </canvas>
+    </div>
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var c = canvas.getContext("2d")
+        canvas.width=window.innerWidth;
+        canvas.height=window.innerHeight;
+        var x=0
+        var warning=false
+        var img=new Image()
+        img.src="download.jpeg"
+        function drawCanvas(){
+            c.font="50px Arial"
+            c.fillStyle="green"
+            c.clearRect(0,0,canvas.width, canvas.height)
+            c.fillText("GoPackGo",x,canvas.height/2)
+            c.strokeStyle="red"
+            c.font="50px Arial"
+            c.strokeText("GoPackGo", x, canvas.height/2)
+            c.drawImage(img,x,40)
+            if (warning==false){
+                x=x+30
+            }
+            else{
+                x=x-30
+            }
+            if(x>canvas.width-300){
+                warning=true
+            }
+            if(x<0){
+                warning=false
+            }
+            c.beginPath()
+            c.arc(790,550,100,0,360)
+            c.stroke()
+            c.beginPath()
+            c.arc(790,565,50,0,Math.PI)
+            c.stroke()
+            c.beginPath()
+            c.arc(825,520,10,0,360)
+            c.stroke()
+            c.beginPath()
+            c.arc(750,520,10,0,360)
+            c.stroke()
+        }
+        setInterval(drawCanvas, 100)
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="icon" href="pickle logo.jpeg">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <h1>About me</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="my gallery.html">Gallery</a>
+        <a href="feedback.html">Feedback_Form</a>
+        <a href="minigames.html">Mini_Projects</a></nav>
+        <p id="myPara"></p>
+    <p id="date"></p>
+    <p>I'm a 14 year old kid who likes sports, food and video games. This website tells all about me. </p>
+    <h2>TOP 5 TEAMS</h2>
+    <div id="slideshow">
+        <img src="download.png" alt="" class="slides">
+        <img src="download.jpeg" alt="" class="slides">
+        <img src="download (1).jpeg" alt="" class="slides">
+        <img src="bills.png" alt="" class="slides">
+        <img src="bengals.png" alt="" class="slides">
+    </div>
+    <img src="trailblazers logo.png" alt="">
+    <img src="packers logo.jpeg" alt="" onmouseover="change(this)" onmouseout="changeback(this)">
+    <script>
+        function getDate(){
+            var today = new Date();
+            document.getElementById("date").innerHTML= today.toLocaleString();
+            if(today.getHours()>=1 && today.getHours()<=4){
+    document.getElementById("Greeting").innerHTML = "Night"
+    }
+    if(today.getHours()>=4 && today.getHours()<=11){
+    document.getElementById("Greeting").innerHTML = "Good Morning"
+    }
+    if(today.getHours()>=11 && today.getHours()<=16){
+    document.getElementById("Greeting").innerHTML = "Good Afternoon"
+    }
+    if(today.getHours()>=17 && today.getHours()<=20){
+    document.getElementById("Greeting").innerHTML = "Good Evening"
+    }
+    if(today.getHours()>=20 && today.getHours()<=24){
+    document.getElementById("Greeting").innerHTML = "Good Night"
+    }
+    
+        }
+        setInterval(getDate,1000);
+        var name=prompt('Welcome to my Webpage!');
+        console.log(name);
+        document.getElementById('myPara').innerHTML='hello '+name;
+        confirm("Confirmation");
+        var orgWidth = "";
+        function change(e){
+            orgWidth = e.style.width;
+            e.style.width="500px";
+            console.log(e);
+        }
+        function changeback(e){
+            e.style.width=orgWidth; 
+        }
+        function changeHeading(){
+           var headings = document.getElementsByTagName("h2");
+           console.log(headings);
+           
+        headings[0].style.color='#026e5f';
+        headings[1].style.color='#026e5f';
+        headings[2].style.color='#026e5f';
+        headings[3].style.color='#026e5f';
+    }
+        function changeRgb(e){
+            console.log("hi")
+            e.style.backgroundColor="#8c00f7";
+        }
+    var img_index=0
+    function start_slideshow(){
+        var images=document.getElementsByClassName("slides")
+        for(i=0;i<images.length;i++){
+            images[i].style.display="none";
+        }
+        images[img_index].style.display="block";
+        img_index++
+        if(img_index>=images.length)[
+            img_index=0
+        ]
+        setTimeout(start_slideshow,1000)
+    }
+    start_slideshow();
+    </script>
+</body>
+</html>

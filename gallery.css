@@ -1,0 +1,85 @@
+.main_division{
+    width: 97vw;
+    border: 2px greenyellow double;
+    box-shadow: red 5px 2px 5px;
+    border-radius: 10%;
+    margin: 20px 0;
+    color: white;
+    padding: 5px;
+    font-weight: 700;
+    overflow: hidden;
+    height: fit-content;
+}
+body{
+    background-color: black;
+    color: skyblue;
+    font-size: 30px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.subdiv{
+    width: 23vw;
+    overflow:hidden;
+    float: left;
+    margin: 10px;
+    height: fit-content;
+}
+.subdiv img{
+    width: 98%;
+    height: 98%;
+    transition: 1s;
+}
+.subdiv audio{
+    margin: 1vh 2vw;
+}
+.subdiv p{
+    text-align: center;
+}
+.subdiv video{
+    width: 98%;
+    height: 50vh;
+}
+.subdiv img:hover{
+    transform:rotate(20deg);
+}
+nav{
+    width: 98%;
+    margin: auto;
+    background-color: chartreuse;
+    border-radius: 10%;
+}
+nav a{
+    background-color: rgb(54, 19, 182);
+    color: white;
+    font-size: 2vw;
+    margin: 1% 7%;
+    padding: 1%;
+    border-radius: 15% 25%;
+    display: inline-flex;
+}   
+li{
+    list-style-type: none;
+}
+img{
+    width: 50vw;
+}
+.Buttons{
+    width:70px;
+    height:40px;
+}
+.calculator{
+    border: 2px greenyellow solid;
+    width: fit-content;
+    margin: auto;
+    background-color: skyblue;
+}
+#slideshow{
+    margin: auto;
+    width: fit-content;
+}
+canvas{
+    background-color: yellow;
+    border-radius: 10%;
+}
